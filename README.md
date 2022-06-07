@@ -3,6 +3,7 @@
 **What is Polotno?**
 
 Polotno is a fantastic design editing application that allows users to engage with and build any template. (for custom size as well as social media post)
+https://polotno.com/
 
 **Why Polotno?**
 
@@ -331,7 +332,7 @@ export class AppComponent implements OnInit, AfterViewInit{
 `npm start` 
 
 **Over To You!**
-
+check codesandbox sample https://codesandbox.io/s/bj-polotno-angular-10wx3x
 
 
 
