@@ -1,29 +1,24 @@
-import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import { App } from './polotno-js/app';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit{
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'polotno-js';
-  ngOnInit(): void {}
+  constructor(private router: Router) {
+    this.router.navigate(["home"]);
+  }
+  ngOnInit(): void { }
 
   public ngOnChanges() {
-    this.renderComponent();
   }
 
   public ngAfterViewInit() {
-    this.renderComponent();
   }
 
-  private renderComponent() {
-       ReactDOM.render(
-        React.createElement(App) 
-      ,document.getElementById('root')
-      );
-  }
+
+
 }
