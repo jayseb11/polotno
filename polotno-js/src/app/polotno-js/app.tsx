@@ -129,17 +129,17 @@ const DownloadButton = observer(() => {
                 });
                 setSaving(false);
               } else {
-                store.pages.forEach((page, index) => {
-                  // do not add index if we have just one page
-                  const indexString =
-                    store.pages.length > 1 ? "-" + (index + 1) : "";
-                  store.saveAsImage({
-                    pageId: page.id,
-                    pixelRatio: quality,
-                    mimeType: "image/" + type,
-                    fileName: getName() + indexString + "." + type,
-                  });
-                });
+                // store.pages.forEach((page, index) => {
+                //   // do not add index if we have just one page
+                //   const indexString =
+                //     store.pages.length > 1 ? "-" + (index + 1) : "";
+                //   store.saveAsImage({
+                //     pageId: page.id,
+                //     pixelRatio: quality,
+                //     mimeType: "image/" + type,
+                //     fileName: getName() + indexString + "." + type,
+                //   });
+                // });
               }
             }}
           >
